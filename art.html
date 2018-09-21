@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!------------------------------->
+        <!-- Site made by Joe Aquiare. -->
+        <!------------------------------->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">  
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <script src="scripts/siteScript.js"></script>
+        <title>joeaquiare.com - art</title>
+        <style>
+            #artCanvas {
+                margin: 0 auto;
+                margin-bottom: 0px;
+            }
+            
+            #textBody {
+                padding-top: 15px;
+                padding-left: 50px;
+                padding-right: 45px;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            
+            #textBody img {
+                padding: 6px 5px 6px 5px;
+                border-radius: 20px;
+                opacity: 0.7;
+                max-width: 130px;
+                border: 2px dashed rgba(0,0,0,0);
+                transition: opacity .2s, border-radius .4s, margin .3s, border .1s;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            
+            #textBody img:hover {
+                margin: 0px 20px 0px 20px;
+                border: 2px dashed rgba(0,0,0,.2);
+                opacity: 1.0;
+                border-radius: 10px;
+            }
+            
+            @media only screen and (max-width:700px) {
+                #artCanvas, #commissionCanvas{
+                    width: 100%;
+                }
+                
+                #textBody img {
+                    padding: 3px 2px 3px 2px;
+                    max-width: 100%;
+                    width: 29%;
+                    opacity: 1.0;
+                    transition: margin .01s;
+                }
+                
+                #textBody img:hover { 
+                    margin: 0 auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <img src="images/starpattern.png" id="pattern">
+        <div id="main">
+            <canvas id="headerCanvas" width="596" height="120">Canvas drawing not supported! Update your browser!</canvas>
+            <ul id="links">
+                <a href="index.html"><li value="Home"><i class="fas fa-home"></i> Home</li></a>
+                <a href="about.html"><li value="About"><i class="fas fa-question"></i> About</li></a>
+                <a href="music.html"><li value="Music"><i class="fas fa-music"></i> Music</li></a>
+                <a href="art.html" style="color:#999"><li value="Art"><i class="fas fa-palette"></i> Art</li></a>
+                <a href="projects.html"><li value="Projects"><i class="fas fa-project-diagram"></i> Projects</li></a>
+            </ul>
+            <canvas id="artCanvas" width="596" height="60">Canvas drawing not supported! Update your browser!</canvas>
+            <div id="textBody">
+                
+                <img src="images/art1.jpg" id="art" value="Cover art for a song on DESKPOP records."                     link="https://i.imgur.com/H05rn2l.png">
+                <img src="images/art2.jpg" id="art" value="A 3D Mosiac piece."                                           link="https://i.imgur.com/N6PzjOb.jpg">
+                <img src="images/art3.jpg" id="art" value="A poster I'd made for a show in Washington."                  link="https://i.imgur.com/sT6EJmj.png">
+                <img src="images/art4.jpg" id="art" value="A cover art remix from an album by EchoRobot."                link="https://i.imgur.com/5kqVGTM.png">
+                <img src="images/art5.jpg" id="art" value="A 3D Mosiac piece."                                           link="https://i.imgur.com/hgQD3sD.jpg">
+                <img src="images/art6.jpg" id="art" value="A 3D Mosiac piece."                                           link="https://i.imgur.com/kS49n5K.png">
+                <img src="images/art7.jpg" id="art" value="A piece of album artwork I completed for &#34;GrazCore.&#34;" link="https://i.imgur.com/ATjZaS9.jpg">
+                <img src="images/art8.jpg" id="art" value="A commission piece for someone named &#34;QJ.&#34;"           link="https://i.imgur.com/4tkvEI9.png">
+                <img src="images/art9.jpg" id="art" value="A 3D Mosiac piece."                                           link="https://i.imgur.com/wtKd2aY.png">
+                
+                <div id="artModal" class="modal">
+                    <span class="close"><i class="fas fa-times"></i> Close</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+                
+                <br><br>
+                My art consists mostly of mixed-media pieces, created in Autodesk 3DS Max, Autodesk Maya, Adobe Photoshop and Adobe Illustrator. I also illustrate by-hand, but I don't like to showcase what I've done since many pieces are unfinished or not in a presentable state. 
+                <br><br>
+                Some of my pieces have been popularized and used under various music record labels and artistic individuals, such as my affiliates <a href="https://soundcloud.com/deskpopmusic" target="_blank">DESKPOP Music</a>, <a href="https://soundcloud.com/hyperpopcollective" target="_blank">HYPERPOP Collective</a>, <a href="https://soundcloud.com/nelward" target="_blank">Nelward</a>, <a href="https://soundcloud.com/SHADY-MONK" target="_blank">Shady Monk</a>, and many, many more.
+                <br><br>
+                <hr>
+                <canvas id="commissionCanvas" width="400" height="90">Canvas drawing not supported! Update your browser!</canvas>
+                <br>
+                For commissions and pricing models, please contact me so we can discuss what works best for you! Each commission is entirely individualized, and I don't have set prices for each medium or type of piece. Contacts are on the home page!
+            </div>
+        </div>
+        <script src="scripts/artScript.js"></script>
+        <footer id="pageFooter">
+            Site created by Joe Aquiare. Site uses Google Font's "Concert One" font, and FontAwesome for .svg icons and emblems.
+        </footer>
+    </body>
+</html>
