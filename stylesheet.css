@@ -1,0 +1,214 @@
+/****************************/
+/* Site made by Joe Aquiare */
+/****************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: url(images/cursor.png), auto;
+}
+
+@keyframes bgcolor {
+    0% { background-color: #feefb9; }
+    25% { background-color: #fedfc9; }
+    50% { background-color: #fecfd9; }
+    75% { background-color: #febfe8; }
+    100% { background-color: #feefb9; }
+}
+
+body {
+    margin: 0 auto;
+    background-color: rgb(240,240,240);
+    font-size: 14px;
+    max-width: 600px;
+    overflow-y: scroll;
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 15s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    
+}
+
+#textBody {
+    cursor: url(images/cursor.png), auto;
+}
+
+img, iframe:hover{
+    cursor: url(images/pointer.png), auto !important;
+}
+
+#textBody a {
+    color: rgb(130,130,130);
+    transition: color .2s;
+    text-shadow: -2px 2px 0px rgba(0,0,0,.05);
+    cursor: url(images/pointer.png), auto;
+}
+
+#textBody a:hover {
+    color: rgb(200,200,200);
+}
+
+#pattern {
+    visibility: hidden;
+    position: absolute;
+}
+
+#headerCanvas {
+    text-align: center;
+    border-bottom: 2px dashed rgba(0,0,0,.2);
+    border-radius: 10px;
+}
+
+#main {
+    font-family: Concert One;
+    margin-top: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 2px solid rgb(20,20,20);
+    box-shadow: 0px 5px 7px rgba(0,0,0,.2);
+    background-color: white;
+    min-height: 300px;
+}
+
+#links {
+    margin-left: 25px;
+    padding-top: 15px;
+    text-align: center;
+    
+}
+
+#links li {
+    display: inline;
+    margin-right: 30px;
+    text-shadow: -2px 2px 0px rgba(0,0,0,.1);
+    cursor: url(images/pointer.png), auto;
+}
+
+hr {
+    border: 0;
+    border-bottom: 2px dashed rgba(0,0,0,.2);
+}
+
+#pageFooter {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    font-family: Concert One;
+    color: rgba(0,0,0,.1);
+    transition-timing-function: ease-out;
+    transition: color .3s, margin-top .2s, font-size .4s;
+    font-size: 10px;
+}
+
+.modal {
+    font-family: Concert One;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.7);
+}
+            
+.modal-content {
+    margin: auto !important;
+    display: block !important;
+    opacity: 1.0 !important;
+    max-width: 500px !important;
+    border: 0 none !important;
+    border-radius: 0px !important;
+}
+            
+#caption {
+    margin: auto; 
+    display: block;
+    width: 80%;
+    max-width: 7000px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+            
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+            
+@keyframes zoom {
+    from{transform:scale(0)}
+    to{transform:scale(1)}
+}
+            
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 20px;
+    transition: 0.6s;
+}
+            
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: url(images/pointer.png), pointer;
+}
+
+#pageFooter:hover {
+    color: rgba(0,0,0,.5);
+    margin-top: 12px;
+    font-size: 11px;
+}
+
+a, a:visited {
+    color: black;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+a:hover {
+    color: #bbb;
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        font-size: 12px;
+        width: 90%;
+    }
+    
+    #links li {
+        font-size: 16px;
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 4px;
+        margin-right: 25px;
+        border: 2px solid rgb(20,20,20,.1);
+        border-radius: 10px;
+        transition: background-color .1s;
+    }
+    
+    #links li:hover {
+        background-color: rgba(0,0,0,.03);
+    }
+    
+    #headerCanvas {
+        width: 100%;
+    }
+    
+    .modal-content {
+        opacity: 1.0 !important;
+        max-width: 500px !important;
+        width: 100% !important;
+    }
+}
