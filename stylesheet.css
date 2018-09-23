@@ -22,8 +22,8 @@ body {
     font-size: 14px;
     max-width: 600px;
     overflow-y: scroll;
-    -webkit-animation: bgcolor 10s infinite;
-    animation: bgcolor 10s infinite;
+    -webkit-animation: bgcolor 30s infinite;
+    animation: bgcolor 30s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
     
