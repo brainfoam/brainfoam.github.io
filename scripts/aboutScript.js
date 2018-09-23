@@ -32,7 +32,7 @@ function init() {
     
     let span = document.querySelectorAll(".close")[0];
     
-    span.onclick = function() {
+    span.onclick = modal.onclick = function() {
         modal.style.display = "none";
         modalImg.src = "";
     }
