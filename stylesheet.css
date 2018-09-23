@@ -9,11 +9,11 @@
 }
 
 @keyframes bgcolor {
-    0% { background-color: #feefb9; }
-    25% { background-color: #fedfc9; }
-    50% { background-color: #fecfd9; }
-    75% { background-color: #febfe8; }
-    100% { background-color: #feefb9; }
+    0% { background-color: #ff8383; }
+    25% { background-color: #ffdd8b; }
+    50% { background-color: #fffa90; }
+    75% { background-color: #81ff76; }
+    100% { background-color: #7a76ff; }
 }
 
 body {
@@ -22,8 +22,8 @@ body {
     font-size: 14px;
     max-width: 600px;
     overflow-y: scroll;
-    -webkit-animation: bgcolor 20s infinite;
-    animation: bgcolor 15s infinite;
+    -webkit-animation: bgcolor 10s infinite;
+    animation: bgcolor 10s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
     
