@@ -22,6 +22,7 @@ let eye_rad = 24;
 let eye_freq = .04;
 let eye_amp = 2;
 let pupil_off = 11;
+let eye_alpha = 0.0;
 ////////////////////////
 
 window.onload = init;
@@ -65,6 +66,12 @@ function canvasLoop() {
 }
 
 function drawEyeballs(c) {
+
+    if(eye_alpha < 1.0)
+        eye_alpha += 0.1;
+        
+    ctx.globalAlpha = eye_alpha;
+
     //right eyeball
     drawCircle(c, eye_x + eye_sep, eye_y + eye_amp * Math.sin(incr * eye_freq), eye_rad, 'white', true, 3, 'black');   
     //right pupil
@@ -73,6 +80,8 @@ function drawEyeballs(c) {
     drawCircle(c, eye_x, eye_y + eye_amp * Math.sin(2 + incr * eye_freq), eye_rad, 'white', true, 3, 'black');
     //left pupil
     drawCircle(c, eye_x + pupil_off, eye_y + (eye_amp * 1.5) * Math.sin(.4 + incr * eye_freq), eye_rad / 2.5, 'black');
+
+    ctx.globalAlpha = 1.0;
 }
 
 //Draws the looping background pattern behind the canvas.
